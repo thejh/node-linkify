@@ -7,7 +7,7 @@ var MAGIC_REGEX = (function() {
                     })
                     .join('')
                    ,
-                    'g'
+                    'gi'
                    )
 })()
 
