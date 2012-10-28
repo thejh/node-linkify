@@ -18,6 +18,11 @@ function replaceURLs(text, fn) {
         url = url.replace(/\\/g, '\\\\').replace(/"/g, '\\"')
         return '<a href="'+url+'">'+match+'</a>'
       }
+    else if (fn === 'latex')
+      fn = function(match, url) {
+        url = url.replace(/\\/g, '\\\\').replace(/"/g, '\\"')
+        return '\\href{'+url+'}{'+match+'}'
+      }
     else
       throw new Error('unknown replacer type')
   }
