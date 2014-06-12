@@ -15,7 +15,7 @@ function replaceURLs(text, fn) {
   if (typeof fn === 'string') {
     if (fn === 'html')
       fn = function(match, url) {
-        url = url.replace(/\\/g, '\\\\').replace(/"/g, '\\"')
+        url = url.replace(/"/g, '&quot;')
         return '<a href="'+url+'">'+match+'</a>'
       }
     else if (fn === 'latex')
